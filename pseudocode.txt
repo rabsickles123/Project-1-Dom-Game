@@ -1,3 +1,45 @@
 Project 1---DOM GAME
 
 Build a rock paper scissors game using html, css, and javascript.
+
+Things that are necessary in the game for requirements ():
+must be two players
+must have a win state
+must have a lose state
+a way to keep playing if the game is not over
+multiple rounds
+round must begin and end with a winner and loser and must decide to keep playing or not
+
+
+nice to haves ():
+A way to reset the board and play again
+CSS to give your game a personal and fun style
+Responsive mobile design
+Work with your instructor to determine additional stretch goals
+
+html
+-have multiple divs in the body (in the center)
+-title in header 
+-add a div in the middle for displaying who wins with display of player1 and player2/computers
+ choice. (possibly animate this with sound-nice to have)
+-add buttons for rock paper and scissor for player1 and player2/computer
+-have scores of wins of player1 and player2/computer divs of each with the
+ respective parties name on it
+-possibly animate it via CANVAS (have hands and stuff) - nice to have
+
+css
+-need flexbox or grid to organize divs in the appropriate way
+-change the color, style, background etc 
+-possibly animate it?-nice to have
+
+javascript
+-will need event listeners that listen for clicks of the respective button(rock, paper, scissor) 
+-each button will trigger 
+-a huge if else statement that will look at the various conditions and calculate a win
+each round of a game can consist of 7 games with player1 and player2/computer having 
+have an array or counter of player1 and player2/computer and have them store the wins 
+and not appoint a point if there is no win
+   - will need a condition that checks for a tie and does NOT give a point to either party
+     and still continues the game.
+   - determines when game is over and states winner or declares tie/draw
+- need functions (!!!)
