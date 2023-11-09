@@ -1,0 +1,3 @@
+Project 1---DOM GAME
+
+Build a rock paper scissors game using html, css, and javascript.
