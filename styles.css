@@ -1,3 +1,9 @@
-body {
+html {
     background-color: lightcoral;
+}
+
+
+
+h1 {
+    text-align: center;
 }
