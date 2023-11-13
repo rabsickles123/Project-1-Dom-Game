@@ -6,7 +6,7 @@ let scoreboard_div = document.getElementsByClassName(".scoreboard")
 let rockChoice = document.querySelector("#rock")
 let paperChoice = document.querySelector("#paper")
 let scissorsChoice = document.querySelector("#scissors")
-let showDown_div = document.querySelector(".showdown")
+let showDown_div = document.querySelector("#showtexthere")
 let resetButton = document.querySelector(".reset")
 let roundsPlayed = 0;
 let maxRounds = 7;
@@ -32,6 +32,24 @@ function resetGame(){
         showDown_div.textContent = "Game reset! Lets play again :)"
 }
 
+function resetGameWithDelay() {
+    setTimeout(() => {
+        userScore = 0;
+        computerScore = 0;
+        roundsPlayed = 0;
+        updateScore();
+        showDown_div.textContent = "Press a button to play!";
+    }, 2000);
+}
+
+function resetGamePlayAgain(){
+    userScore = 0;
+    computerScore = 0;
+    roundsPlayed = 0;
+    updateScore();
+    showDown_div.textContent = "Press a button to play!"
+}
+
 function checkWinner() {
     if (roundsPlayed === maxRounds) {
         if (userScore > computerScore) {
@@ -41,15 +59,9 @@ function checkWinner() {
         } else {
             showDown_div.textContent = "DRAW";
         }
-        resetGame();
+        resetGameWithDelay();
     }
 }
-/* while loop necessary to instate a full game
-so while (i < = 7) {game continues with}
-winner of the 7 games (whoever has more is declared winner with a "You win!" 
-popping up on screen and confetti animation and pah pah sound. Otherwise "You lose :("
-*/
-
 
 rockChoice.addEventListener('click', (evt) => {
     computerChoice = getComputerChoice();
@@ -119,8 +131,8 @@ scissorsChoice.addEventListener('click', (evt) => {
 
 resetButton.addEventListener('click', (evt) => {
     userScore = 0
-    computerScore = 0
+    computerScore = 0 
     roundsPlayed = 0
     updateScore()
-    showDown_div.textContent = "Game reset!"
+    showDown_div.innerHTML = " "
 })
