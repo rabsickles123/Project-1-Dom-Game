@@ -42,7 +42,6 @@ rockChoice.addEventListener('click', (evt) => {
     } else if (userChoice === computerChoice){
         console.log("Computer chose rock...Its a draw :/")
         showDown_div.textcontent = "Computer chose rock...Its a draw :/"
-
     }
     updateScore()
 })
@@ -55,22 +54,27 @@ paperChoice.addEventListener('click', (evt) => {
         console.log("Computer chose paper...Its a draw :/")
     } else if (computerChoice === scissorsChoice) {
         console.log("Computer chose scissors. You lose :(")
+        computerScore++
     } else if (computerChoice === rockChoice) {
         console.log("Computer chose rock. You win!")
+        userScore++
     }
     updateScore()
 })
 
 scissorsChoice.addEventListener('click', (evt) => {
-    computerChoice = getComputerChoice()
-    userChoice = scissorsChoice
+    computerChoice = getComputerChoice();
+    userChoice = scissorsChoice;
     console.log("You chose scissors.")
     if (computerChoice === userChoice) {
         console.log("Computer chose scissors...Its a draw :/")
     } else if (computerChoice === rockChoice) {
         console.log("Computer chose rock. You lose :(")
+        computerScore++
     } else if (computerChoice === paperChoice) {
         console.log("Computer chose paper. You win!")
+        userScore++
+
     }
     updateScore()
 })
