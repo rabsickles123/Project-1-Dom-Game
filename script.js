@@ -20,8 +20,8 @@ function getComputerChoice() {
 }
 
 function updateScore() {
-    playerScore_div.textContent ="Your score: " + userScore;
-    computerScore_div.textContent = "Computer score: " + computerScore
+    playerScore_div.textContent ="You: " + userScore;
+    computerScore_div.textContent = "Computer: " + computerScore
 }
 
 function resetGame(){

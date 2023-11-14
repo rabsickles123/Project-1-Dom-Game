@@ -1,18 +1,51 @@
 html {
-    background-color: lightcoral;
+    background-color: hsl(228, 45%, 44%);
 }
 
- /* body {
+body {
+    display: flex;
+    flex-flow: column wrap;
     align-items: center; 
-}  */
+} 
 
 h1 {
     text-align: center;
+    font-family: sans-serif;
 }
 
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: rgb(141, 141, 18); 
+     color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+
 .showdown {
+    font-family: sans-serif;
     border: 1px solid black;
     height: 100px;
     width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+.scoreboard {
+    background-color: hsl(228, 45%, 44%);
+    font-family: sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 5px solid whitesmoke;
+    text-shadow: color-mix(hsl(229, 64%, 46%));
+}
