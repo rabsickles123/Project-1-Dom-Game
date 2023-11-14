@@ -1,18 +1,53 @@
-html {
-    background-color: hsl(228, 45%, 44%);
-}
-
 body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
     display: flex;
-    flex-flow: column wrap;
-    align-items: center; 
-} 
-
-h1 {
-    text-align: center;
-    font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#playerScore, #computerScore {
+    margin-bottom: 10px;
+}
+
+.showdown {
+    border: 5px solid #333;
+    border-radius: 8px;
+    height: 100px; 
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 18px; 
+    font-style:oblique;
+    background-color: #f9f9f9; 
+    color: #333; 
+}
 .choices {
     display: flex;
     justify-content: space-around;
@@ -20,32 +55,30 @@ h1 {
 }
 
 button {
-    background-color: rgb(141, 141, 18); 
-     color: white;
+    background-color: #4CAF50;
+    color: white;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-
-.showdown {
-    font-family: sans-serif;
-    border: 1px solid black;
-    height: 100px;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
+button:hover {
+    background-color: #178f1d;
 }
 
-.scoreboard {
-    background-color: hsl(228, 45%, 44%);
-    font-family: sans-serif;
-    padding: 10px;
+.reset {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
     border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 5px solid whitesmoke;
-    text-shadow: color-mix(hsl(229, 64%, 46%));
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset:hover {
+    background-color: #c9302c;
 }

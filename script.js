@@ -2,7 +2,7 @@ let userScore = 0;
 let computerScore = 0;
 let playerScore_div = document.getElementById("playerScore")
 let computerScore_div = document.getElementById("computerScore")
-let scoreboard_div = document.getElementsByClassName(".scoreboard")
+let scoreboard_div = document.querySelector(".scoreboard")
 let rockChoice = document.querySelector("#rock")
 let paperChoice = document.querySelector("#paper")
 let scissorsChoice = document.querySelector("#scissors")
@@ -50,14 +50,29 @@ function resetGamePlayAgain(){
     showDown_div.textContent = "Press a button to play!"
 }
 
+// function makeButtonsUnclickable() {
+//     rockChoice.removeEventListener('click', rockClickHandler);
+//     paperChoice.removeEventListener('click', paperClickHandler);
+//     scissorsChoice.removeEventListener('click', scissorsClickHandler);
+// }
+
+// function makeButtonsClickable() {
+//     rockChoice.addEventListener('click', rockClickHandler);
+//     paperChoice.addEventListener('click', paperClickHandler);
+//     scissorsChoice.addEventListener('click', scissorsClickHandler);
+// }
+
 function checkWinner() {
     if (roundsPlayed === maxRounds) {
         if (userScore > computerScore) {
             showDown_div.textContent = "You win the game!";
+            let winnerPrompt = alert("You win! " + "You: " + userScore + " Computer: " + computerScore)
         } else if (userScore < computerScore) {
             showDown_div.textContent = "You lose the game :(";
+            let loserPrompt = alert("You lost! " + "Computer: "+ computerScore + " You: " + userScore)
         } else {
-            showDown_div.textContent = "DRAW";
+            showDown_div.textContent = "Its a draw...";
+            let drawPrompt = alert("It's a draw...")
         }
         resetGameWithDelay();
     }
@@ -70,15 +85,15 @@ rockChoice.addEventListener('click', (evt) => {
     console.log("You chose rock.")
     if (computerChoice === scissorsChoice) {
         console.log("Computer chose scissors. You win!")
-        showDown_div.textContent = "Computer chose scissors. You win!"
+        showDown_div.textContent = "You chose rock. Computer chose scissors. You win!"
         userScore++
     } else if (computerChoice === paperChoice) {
         console.log("Computer chose paper. You lose :(")
-        showDown_div.textContent = "Computer chose paper. You lose :("
+        showDown_div.textContent = "You chose rock. Computer chose paper. You lose :("
         computerScore++
     } else if (userChoice === computerChoice){
-        console.log("Computer chose rock...Its a draw :/")
-        showDown_div.textContent = "Computer chose rock...Its a draw :/"
+        console.log("You chose rock. Computer chose rock...Its a draw :/")
+        showDown_div.textContent = "You chose rock. Computer chose rock...Its a draw :/"
     }
     updateScore()
     roundsPlayed ++
@@ -91,15 +106,15 @@ paperChoice.addEventListener('click', (evt) => {
     showDown_div.textContent = "You chose paper."
     console.log("You chose paper.")
     if (computerChoice === userChoice) {
-        console.log("Computer chose paper...Its a draw :/")
-        showDown_div.textContent = "Computer chose paper...Its a draw :/"
+        console.log("You chose paper. Computer chose paper...Its a draw :/")
+        showDown_div.textContent = "You chose paper. Computer chose paper...Its a draw :/"
     } else if (computerChoice === scissorsChoice) {
-        console.log("Computer chose scissors. You lose :(")
-        showDown_div.textContent = "Computer chose scissors. You lose :("
+        console.log("You chose paper. Computer chose scissors. You lose :(")
+        showDown_div.textContent = "You chose paper. Computer chose scissors. You lose :("
         computerScore++
     } else if (computerChoice === rockChoice) {
         console.log("Computer chose rock. You win!")
-        showDown_div.textContent = "Computer chose rock. You win!"
+        showDown_div.textContent = "You chose paper. Computer chose rock. You win!"
         userScore++
     }
     updateScore()
@@ -114,14 +129,14 @@ scissorsChoice.addEventListener('click', (evt) => {
     console.log("You chose scissors.")
     if (computerChoice === userChoice) {
         console.log("Computer chose scissors...Its a draw :/")
-        showDown_div.textContent = "Computer chose scissors...Its a draw :/"
+        showDown_div.textContent = "You chose scissors. Computer chose scissors...Its a draw :/"
     } else if (computerChoice === rockChoice) {
         console.log("Computer chose rock. You lose :(")
-        showDown_div.textContent = "Computer chose rock. You lose :("
+        showDown_div.textContent = "You chose scissors. Computer chose rock. You lose :("
         computerScore++
     } else if (computerChoice === paperChoice) {
         console.log("Computer chose paper. You win!")
-        showDown_div.textContent = "Computer chose paper. You win!"
+        showDown_div.textContent = "You chose scissors. Computer chose paper. You win!"
         userScore++
     }
     updateScore()
