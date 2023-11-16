@@ -50,18 +50,6 @@ function resetGamePlayAgain(){
     showDown_div.textContent = "Press a button to play!"
 }
 
-// function makeButtonsUnclickable() {
-//     rockChoice.removeEventListener('click', rockClickHandler);
-//     paperChoice.removeEventListener('click', paperClickHandler);
-//     scissorsChoice.removeEventListener('click', scissorsClickHandler);
-// }
-
-// function makeButtonsClickable() {
-//     rockChoice.addEventListener('click', rockClickHandler);
-//     paperChoice.addEventListener('click', paperClickHandler);
-//     scissorsChoice.addEventListener('click', scissorsClickHandler);
-// }
-
 function checkWinner() {
     if (roundsPlayed === maxRounds) {
         if (userScore > computerScore) {
