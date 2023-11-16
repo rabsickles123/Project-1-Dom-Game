@@ -12,6 +12,9 @@ let startButton = document.querySelector("#startButton")
 let winnerSound = document.querySelector("#congratsaudio")
 let tieSound = document.querySelector("#gongaudio")
 let loserSound = document.querySelector("#loseraudio")
+let rockSound = document.querySelector("#rocksound")
+let paperSound = document.querySelector("#papersound")
+let scissorSound =  document.querySelector("#scissorsound")
 let roundsPlayed = 0;
 let maxRounds = 7;
 let userChoice; 
@@ -19,8 +22,6 @@ let computerChoice;
 
 function playRockPaperScissors (){
     // add the event listener game logic here...?
-
-
 }
 
 
@@ -51,7 +52,7 @@ function resetGameWithDelay() {
         roundsPlayed = 0;
         updateScore();
         showDown_div.textContent = "Press a button to play!";
-    }, 2000);
+    }, 2500);
 }
 
 function resetGamePlayAgain(){
@@ -88,6 +89,7 @@ startButton.addEventListener('click', (evt) => {
 })
 
 rockChoice.addEventListener('click', (evt) => {
+    rockSound.play()
     computerChoice = getComputerChoice();
     userChoice = rockChoice
     showDown_div.textContent = "You chose rock."
@@ -110,6 +112,7 @@ rockChoice.addEventListener('click', (evt) => {
 })
 
 paperChoice.addEventListener('click', (evt) => {
+    paperSound.play()
     computerChoice = getComputerChoice()
     userChoice = paperChoice
     showDown_div.textContent = "You chose paper."
@@ -132,6 +135,7 @@ paperChoice.addEventListener('click', (evt) => {
 })
 
 scissorsChoice.addEventListener('click', (evt) => {
+    scissorSound.play()
     computerChoice = getComputerChoice();
     userChoice = scissorsChoice;
     showDown_div.textContent = "You chose scissors."
