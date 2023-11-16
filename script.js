@@ -8,12 +8,19 @@ let paperChoice = document.querySelector("#paper")
 let scissorsChoice = document.querySelector("#scissors")
 let showDown_div = document.querySelector("#showtexthere")
 let resetButton = document.querySelector(".reset")
+let startButton = document.querySelector("#startButton")
 let winnerSound = document.querySelector("#congratsaudio")
 let tieSound = document.querySelector("#gongaudio")
 let roundsPlayed = 0;
 let maxRounds = 7;
 let userChoice; 
 let computerChoice;
+
+function playRockPaperScissors (){
+
+
+}
+
 
 
 function getComputerChoice() {
@@ -70,6 +77,12 @@ function checkWinner() {
         resetGameWithDelay();
     }
 }
+
+startButton.addEventListener('click', (evt) => {
+    playRockPaperScissors();
+    console.log("Game has started.")
+    showDown_div.textContent = "Game has started."
+})
 
 rockChoice.addEventListener('click', (evt) => {
     computerChoice = getComputerChoice();

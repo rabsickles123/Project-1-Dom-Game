@@ -55,6 +55,12 @@ body {
     margin-bottom: 20px;
 }
 
+#startButton {
+    margin-bottom: 50px;
+    margin-top: 25px;
+
+}
+
 button {
     background-color: #4CAF50;
     color: white;
@@ -83,3 +89,4 @@ button:hover {
 .reset:hover {
     background-color: #c9302c;
 }
+
