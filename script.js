@@ -25,7 +25,6 @@ function playRockPaperScissors (){
     // add the event listener game logic here...?
 }
 
-
 function getComputerChoice() {
     let choices = [paperChoice, scissorsChoice, rockChoice]
     let randomize = Math.floor(Math.random()*3)
@@ -82,12 +81,12 @@ function checkWinner() {
     }
 }
 
-startButton.addEventListener('click', (evt) => {
-    playRockPaperScissors();
-    console.log("Game has started.")
-    showDown_div.textContent = "Game has started."
-    startSound.play()
-})
+// startButton.addEventListener('click', (evt) => {
+//     playRockPaperScissors();
+//     console.log("Game has started.")
+//     showDown_div.textContent = "Game has started."
+//     startSound.play()
+// })
 
 rockChoice.addEventListener('click', (evt) => {
     rockSound.play()

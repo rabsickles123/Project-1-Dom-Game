@@ -49,8 +49,8 @@ body {
     font-style:oblique;
     background-color: #f9f9f9; 
     color: #333; 
-    
 }
+
 .choices {
     display: flex;
     justify-content: space-around;
