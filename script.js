@@ -8,10 +8,13 @@ let paperChoice = document.querySelector("#paper")
 let scissorsChoice = document.querySelector("#scissors")
 let showDown_div = document.querySelector("#showtexthere")
 let resetButton = document.querySelector(".reset")
+let winnerSound = document.querySelector("#congratsaudio")
+let tieSound = document.querySelector("#gongaudio")
 let roundsPlayed = 0;
 let maxRounds = 7;
 let userChoice; 
 let computerChoice;
+
 
 function getComputerChoice() {
     let choices = [paperChoice, scissorsChoice, rockChoice]
@@ -55,12 +58,14 @@ function checkWinner() {
         if (userScore > computerScore) {
             showDown_div.textContent = "You win the game!";
             let winnerPrompt = alert("You win! " + "You: " + userScore + " Computer: " + computerScore)
+            winnerSound.play()
         } else if (userScore < computerScore) {
             showDown_div.textContent = "You lose the game :(";
             let loserPrompt = alert("You lost! " + "Computer: "+ computerScore + " You: " + userScore)
         } else {
             showDown_div.textContent = "Its a draw...";
             let drawPrompt = alert("It's a draw...")
+            tieSound.play()
         }
         resetGameWithDelay();
     }
