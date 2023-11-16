@@ -11,12 +11,14 @@ let resetButton = document.querySelector(".reset")
 let startButton = document.querySelector("#startButton")
 let winnerSound = document.querySelector("#congratsaudio")
 let tieSound = document.querySelector("#gongaudio")
+let loserSound = document.querySelector("#loseraudio")
 let roundsPlayed = 0;
 let maxRounds = 7;
 let userChoice; 
 let computerChoice;
 
 function playRockPaperScissors (){
+    // add the event listener game logic here...?
 
 
 }
@@ -69,6 +71,7 @@ function checkWinner() {
         } else if (userScore < computerScore) {
             showDown_div.textContent = "You lose the game :(";
             let loserPrompt = alert("You lost! " + "Computer: "+ computerScore + " You: " + userScore)
+            loserSound.play()
         } else {
             showDown_div.textContent = "Its a draw...";
             let drawPrompt = alert("It's a draw...")
