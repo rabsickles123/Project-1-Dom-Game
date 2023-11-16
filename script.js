@@ -15,6 +15,7 @@ let loserSound = document.querySelector("#loseraudio")
 let rockSound = document.querySelector("#rocksound")
 let paperSound = document.querySelector("#papersound")
 let scissorSound =  document.querySelector("#scissorsound")
+let startSound = new Audio("bell.mp3")
 let roundsPlayed = 0;
 let maxRounds = 7;
 let userChoice; 
@@ -23,7 +24,6 @@ let computerChoice;
 function playRockPaperScissors (){
     // add the event listener game logic here...?
 }
-
 
 
 function getComputerChoice() {
@@ -86,6 +86,7 @@ startButton.addEventListener('click', (evt) => {
     playRockPaperScissors();
     console.log("Game has started.")
     showDown_div.textContent = "Game has started."
+    startSound.play()
 })
 
 rockChoice.addEventListener('click', (evt) => {
