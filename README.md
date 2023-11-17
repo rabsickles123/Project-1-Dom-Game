@@ -16,3 +16,6 @@ The biggest challenge utilizing my logic was adding the seven rounds of game pla
 
 ###### Things that can be improved
 The overall look of the website is a bit simpler than originally planned. I had hoped to add more animations and styling and overall readability of the winning/losing can be a bit difficult to read unless you focus alot. It would be better to if the winner could be declared after the rounds have been cleared instead it shows up before all the points are awarded. (Maybe a game function and the order of everything can be changed) If you go too fast and click away sometimes it takes time for the game to catch up and it can throw it off a bit (but not sure if its a rendering issue or just the code but I'm guessing both).
+
+###### The Website 
+https://rabsickles123.github.io/Project-1-Dom-Game/
