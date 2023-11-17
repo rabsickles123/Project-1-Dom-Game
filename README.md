@@ -2,8 +2,14 @@
 This was my first project from my training at Per Scholas. It utilizes HTML, CSS and Javascript
 and the game runs dynamically through Javascript DOM manipulation. I feel like this game fully utilized all the knowledge I have learned from all three technologies barring objects and classes.
 
-###### The Website 
+## The Website 
 https://rabsickles123.github.io/Project-1-Dom-Game/
+
+## Features
+-Rock, paper, scissors buttons.
+-Plays a sound once a button is selected.
+-Displays what computer chooses and "battle" happens inside text display center
+-Best of seven wins!
 
 ## The Game
 A straightforward rock, paper, scissors game with seven rounds (an odd number seemed appropriate to give less chances of a draw). The game starts once the player decides to press a button.
